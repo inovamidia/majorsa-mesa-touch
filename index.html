@@ -316,7 +316,7 @@
 
     <!-- Página Vistabella (Exemplo) -->
     <div class="page" id="vistabella">
-        <img src="assets/images/bg-page-vistabella.jpg" alt="Vistabella" style="width:100%; object-fit:cover;" />
+        <img src="assets/images/bg-page-vistabella.png" alt="Vistabella" style="width:100%; object-fit:cover;" />
         <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
         <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
             <div class="link-btn-img brochura" onclick="goToPage('vistabella-brochura')"><img src="assets/images/bt-brochura-vistabella.png" alt="" width="100%"></div>
@@ -359,6 +359,98 @@
         <!-- <iframe src="https://www.viverejamor.com/book/samples/vivere/" style="width:100%; height: 100vh; border:none;"></iframe> -->
         <iframe src="https://www.vistabellaoeiras.com/brochura/VISTABELLA_BROCHURA.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
         <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
+    </div>
+
+    <!-- Página ToLive (Exemplo) -->
+    <div class="page" id="tolive">
+        <img src="assets/images/bg-page-tolive.png" alt="ToLive" style="width:100%; object-fit:cover;" />
+        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+            <div class="link-btn-img brochura" onclick="goToPage('tolive-brochura')"><img src="assets/images/bt-brochura-tolive.png" alt="" width="100%"></div>
+            <div class="link-btn-img imagens" onclick="goToPage('tolive-imagens')"><img src="assets/images/bt-imagens-tolive.png" alt="" width="100%"></div>
+            <div class="link-btn-img video" onclick="goToPage('tolive-video')"><img src="assets/images/bt-filme-tolive.png" alt="" width="100%"></div>
+        </div>
+    </div>
+
+    <!-- Imagens ToLive -->
+    <div class="page" id="tolive-imagens">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+               <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/GINASIO.jpg" alt="" width="100%"/>
+               </div>
+               <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/PISCINA-INTERNA.jpg" alt="" width="100%"/>
+               </div>
+               <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/GARAGEM.jpg" alt="" width="100%"/>
+               </div>
+
+            </div>
+            <div class="swiper-button-next"><span>&#8250;</span></div>
+            <div class="swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+         </div>
+         <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
+    </div>
+
+    <!-- Vídeo ToLive -->
+    <div class="page" id="tolive-video" style="height: 100vh;">
+        <video id="video" src="https://tolivecascais.com/upload/video/filme2.mp4" autoplay controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <div class="btn back" onclick="goToPage('tolive');pauseVid();">&#8249;</div>
+    </div>
+
+    <!-- Brochura ToLive -->
+    <div class="page" id="tolive-brochura">
+        <iframe src="https://tolivecascais.com/brochura/BROCHURA_TOLIVE_DIGITAL.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
+    </div>
+
+    <!-- Página Floratta (Exemplo) -->
+    <div class="page" id="floratta">
+        <img src="assets/images/bg-page-floratta.png" alt="floratta" style="width:100%; object-fit:cover;" />
+        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+            <div class="link-btn-img brochura" onclick="goToPage('floratta-brochura')"><img src="assets/images/bt-brochura-floratta.png" alt="" width="100%"></div>
+            <div class="link-btn-img imagens" onclick="goToPage('floratta-imagens')"><img src="assets/images/bt-imagens-floratta.png" alt="" width="100%"></div>
+            <div class="link-btn-img video" onclick="goToPage('floratta-video')"><img src="assets/images/bt-filme-floratta.png" alt="" width="100%"></div>
+        </div>
+    </div>
+
+    <!-- Imagens Floratta -->
+    <div class="page" id="floratta-imagens">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+               <div class="swiper-slide">
+                    <img src="https://www.florattacascais.com/assets/images/fotos/002_Pisc_A_02.jpg" alt="" width="100%"/>
+               </div>
+               <div class="swiper-slide">
+                    <img src="https://www.florattacascais.com/assets/images/fotos/003_Pisc_B_02.jpg" alt="" width="100%"/>
+               </div>
+               <div class="swiper-slide">
+                    <img src="https://www.florattacascais.com/assets/images/fotos/004_Parq_Inft_02.jpg" alt="" width="100%"/>
+               </div>
+
+            </div>
+            <div class="swiper-button-next"><span>&#8250;</span></div>
+            <div class="swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+         </div>
+         <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
+    </div>
+
+    <!-- Vídeo Floratta -->
+    <div class="page" id="floratta-video" style="height: 100vh;">
+        <video id="video" src="https://www.florattacascais.com/assets/video/filme.mp4" autoplay controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <div class="btn back" onclick="goToPage('floratta');pauseVid();">&#8249;</div>
+    </div>
+
+    <!-- Brochura Floratta -->
+    <div class="page" id="floratta-brochura">
+        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
     </div>
 
     <script>
