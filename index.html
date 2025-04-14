@@ -31,7 +31,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fff;
+            background: transparent;
         }
 
         .page.active {
@@ -94,7 +94,7 @@
         #page1 .btn {
             position: absolute;
             top: 50%;
-            margin-top: 10px;
+            margin-top: 220px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -252,7 +252,7 @@
 
     <!-- Página 1 -->
     <div class="page active" id="page1">
-        <img src="assets/images/capa.png" alt="Bem-vindo" style="width:100%; height:100vh; object-fit:cover;" />
+        <img src="assets/images/capa.png" alt="Bem-vindo" style="width:100%; height:60vh; object-fit:cover;" />
         <div class="btn" onclick="goToPage('page2')">&#8250;</div>
 
         <button id="fullscreen-btn" class="btn bt-full" onclick="openFullscreen(); this.style.display='none';">
