@@ -487,6 +487,7 @@
         document.addEventListener('fullscreenchange', () => {
             if (!document.fullscreenElement) {
                 btnFull.style.display = 'block';
+                goToPage('page1');
             } else {
                 btnFull.style.display = 'none';
             }
@@ -495,6 +496,7 @@
         document.addEventListener('webkitfullscreenchange', () => {
             if (!document.webkitFullscreenElement) {
                 btnFull.style.display = 'block';
+                goToPage('page1');
             } else {
                 btnFull.style.display = 'none';
             }
@@ -503,6 +505,7 @@
         document.addEventListener('msfullscreenchange', () => {
             if (!document.msFullscreenElement) {
                 btnFull.style.display = 'block';
+                goToPage('page1');
             } else {
                 btnFull.style.display = 'none';
             }
