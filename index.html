@@ -260,9 +260,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 64px;
-            height: 64px;
+            width: 128px;
+            height: 128px;
             cursor: pointer;
+            opacity: 0.5;
         }
     </style>
 </head>
@@ -371,7 +372,7 @@
     <div class="page" id="vistabella-video" style="height: 100vh;">
         <video id="video" src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('vistabella');pauseVid();">&#8249;</div>
-        <img class="btn-play" onclick="playVid();" src="assets/images/botao-reproduzir.png" alt=""/>
+        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura Vistabella -->
@@ -419,6 +420,7 @@
     <div class="page" id="tolive-video" style="height: 100vh;">
         <video id="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('tolive');pauseVid();">&#8249;</div>
+        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura ToLive -->
@@ -464,6 +466,7 @@
             <source src="https://www.florattacascais.com/assets/video/filme.mp4" type="video/mp4">
         </video>
         <div class="btn back" onclick="goToPage('floratta');pauseVid();">&#8249;</div>
+        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura Floratta -->
