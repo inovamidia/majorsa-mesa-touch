@@ -462,10 +462,10 @@
     <!-- Vídeo Vistabella -->
     <div class="page" id="vistabella-video" style="height: 100vh;">
         <video id="videoVistabella" class="video"
-            src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls
+            src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/videos/filme-vistabella.mp4" muted controls
             style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('vistabella');pauseVidVistabella();">&#8249;</div>
-        <img class="btn-play" onclick="playVidVistabella();this.style.display='none';"
+        <img class="btn-play vistabella" onclick="playVidVistabella();this.style.display='none';"
             src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
@@ -609,10 +609,10 @@
 
     <!-- Vídeo ToLive -->
     <div class="page" id="tolive-video" style="height: 100vh;">
-        <video id="videoTolive" class="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls
+        <video id="videoTolive" class="video" src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/videos/filme-tolive.mp4" muted controls
             style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('tolive');pauseVidTolive();">&#8249;</div>
-        <img class="btn-play" onclick="playVidTolive();this.style.display='none';"
+        <img class="btn-play tolive" onclick="playVidTolive();this.style.display='none';"
             src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
@@ -729,10 +729,10 @@
     <!-- Vídeo Floratta -->
     <div class="page" id="floratta-video" style="height: 100vh;">
         <video id="videoFloratta" class="video" style="width:100%; height: 100%; object-fit:cover;" controls muted>
-            <source src="https://www.florattacascais.com/assets/video/filme.mp4" type="video/mp4">
+            <source src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/videos/filme-floratta.mp4" type="video/mp4">
         </video>
         <div class="btn back" onclick="goToPage('floratta');pauseVidFloratta();">&#8249;</div>
-        <img class="btn-play" onclick="playVidFloratta();this.style.display='none';"
+        <img class="btn-play floratta" onclick="playVidFloratta();this.style.display='none';"
             src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
@@ -831,7 +831,9 @@
 
         function pauseVidVistabella() {
             videoVistabella.pause();
-            document.querySelector(".btn-play").style.display = "block";
+            document.querySelector(".btn-play.vistabella").style.display = "block";
+            document.querySelector(".btn-play.tolive").style.display = "block";
+            document.querySelector(".btn-play.floratta").style.display = "block";
         }
 
         var videoTolive = document.getElementById("videoTolive");
@@ -842,7 +844,9 @@
 
         function pauseVidTolive() {
             videoTolive.pause();
-            document.querySelector(".btn-play").style.display = "block";
+            document.querySelector(".btn-play.vistabella").style.display = "block";
+            document.querySelector(".btn-play.tolive").style.display = "block";
+            document.querySelector(".btn-play.floratta").style.display = "block";
         }
 
         var videoFloratta = document.getElementById("videoFloratta");
@@ -853,7 +857,9 @@
 
         function pauseVidFloratta() {
             videoFloratta.pause();
-            document.querySelector(".btn-play").style.display = "block";
+            document.querySelector(".btn-play.vistabella").style.display = "block";
+            document.querySelector(".btn-play.tolive").style.display = "block";
+            document.querySelector(".btn-play.floratta").style.display = "block";
         }
     </script>
 
