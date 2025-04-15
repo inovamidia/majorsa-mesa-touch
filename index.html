@@ -587,7 +587,19 @@
         }
     </script>
 
-   
+    <script>
+        var video = document.getElementById("videoTolive");
+
+        function advanceByFrames(frames) {
+            const fps = 30; // Substitua por o número exato de FPS do vídeo
+            const secondsPerFrame = 1 / fps;
+            video.currentTime += frames * secondsPerFrame;
+        }
+
+        // Avançando 2 frames
+        advanceByFrames(2);
+    </script>
+
 
 </body>
 </html>
