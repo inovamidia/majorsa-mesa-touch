@@ -738,8 +738,7 @@
 
     <!-- Brochura Floratta -->
     <div class="page" id="floratta-brochura">
-        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf"
-            style="width:100%; height: 100vh; border:none;"></iframe>
+        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
         <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
     </div>
 
@@ -832,6 +831,7 @@
 
         function pauseVidVistabella() {
             videoVistabella.pause();
+            document.querySelector(".btn-play").style.display = "block";
         }
 
         var videoTolive = document.getElementById("videoTolive");
@@ -842,6 +842,7 @@
 
         function pauseVidTolive() {
             videoTolive.pause();
+            document.querySelector(".btn-play").style.display = "block";
         }
 
         var videoFloratta = document.getElementById("videoFloratta");
@@ -852,6 +853,7 @@
 
         function pauseVidFloratta() {
             videoFloratta.pause();
+            document.querySelector(".btn-play").style.display = "block";
         }
     </script>
 
