@@ -370,9 +370,9 @@
 
     <!-- Vídeo Vistabella -->
     <div class="page" id="vistabella-video" style="height: 100vh;">
-        <video id="video" class="video" src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
-        <div class="btn back" onclick="goToPage('vistabella');pauseVid();">&#8249;</div>
-        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <video id="videoVistabella" class="video" src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <div class="btn back" onclick="goToPage('vistabella');pauseVidVistabella();">&#8249;</div>
+        <img class="btn-play" onclick="playVidVistabella();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura Vistabella -->
@@ -418,9 +418,9 @@
 
     <!-- Vídeo ToLive -->
     <div class="page" id="tolive-video" style="height: 100vh;">
-        <video id="video" class="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
-        <div class="btn back" onclick="goToPage('tolive');pauseVid();">&#8249;</div>
-        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <video id="videoTolive" class="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <div class="btn back" onclick="goToPage('tolive');pauseVidTolive();">&#8249;</div>
+        <img class="btn-play" onclick="playVidTolive();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura ToLive -->
@@ -462,11 +462,11 @@
 
     <!-- Vídeo Floratta -->
     <div class="page" id="floratta-video" style="height: 100vh;">
-        <video id="video" class="video" style="width:100%; height: 100%; object-fit:cover;" controls muted>
+        <video id="videoFloratta" class="video" style="width:100%; height: 100%; object-fit:cover;" controls muted>
             <source src="https://www.florattacascais.com/assets/video/filme.mp4" type="video/mp4">
         </video>
-        <div class="btn back" onclick="goToPage('floratta');pauseVid();">&#8249;</div>
-        <img class="btn-play" onclick="playVid();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <div class="btn back" onclick="goToPage('floratta');pauseVidFloratta();">&#8249;</div>
+        <img class="btn-play" onclick="playVidFloratta();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
     </div>
 
     <!-- Brochura Floratta -->
@@ -502,7 +502,9 @@
             if (!document.fullscreenElement) {
                 btnFull.style.display = 'block';
                 goToPage('page1');
-                pauseVid();
+                pauseVidVistabella();
+                pauseVidTolive();
+                pauseVidFloratta();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -512,7 +514,9 @@
             if (!document.webkitFullscreenElement) {
                 btnFull.style.display = 'block';
                 goToPage('page1');
-                pauseVid();
+                pauseVidVistabella();
+                pauseVidTolive();
+                pauseVidFloratta();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -522,7 +526,9 @@
             if (!document.msFullscreenElement) {
                 btnFull.style.display = 'block';
                 goToPage('page1');
-                pauseVid();
+                pauseVidVistabella();
+                pauseVidTolive();
+                pauseVidFloratta();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -550,17 +556,36 @@
    </script>
 
     <script>
-        var video = document.querySelector(".video");
+        var videoVistabella = document.getElementById("videoVistabella");
 
-        function playVid() {
-            video.play();
+        function playVidVistabella() {
+            videoVistabella.play();
         }
 
-        function pauseVid() {
-            video.pause();
+        function pauseVidVistabella() {
+            videoVistabella.pause();
         } 
-    </script>
 
+        var videoTolive = document.getElementById("videoTolive");
+
+        function playVidTolive() {
+            videoTolive.play();
+        }
+
+        function pauseVidTolive() {
+            videoTolive.pause();
+        } 
+
+        var videoFloratta = document.getElementById("videoFloratta");
+
+        function playVidFloratta() {
+            videoFloratta.play();
+        }
+
+        function pauseVidFloratta() {
+            videoFloratta.pause();
+        }
+    </script>
 
    
 
