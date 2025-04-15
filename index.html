@@ -52,7 +52,7 @@
         }
 
         .btn.back {
-            position: absolute; 
+            position: absolute;
             z-index: 999;
             top: 20px;
             left: 20px;
@@ -122,7 +122,7 @@
             left: 29px;
             font-style: italic;
             background-color: #fff;
-            padding:10px;
+            padding: 10px;
         }
 
         .container {
@@ -199,6 +199,7 @@
             margin-top: -164px;
             margin-left: -26px;
         }
+
         .link-btn-img.video {
             margin-top: -54px;
         }
@@ -211,7 +212,8 @@
             height: 100vh;
         }
 
-        .swiper-slide, swiper-slide {
+        .swiper-slide,
+        swiper-slide {
             flex-shrink: 0;
             width: 100%;
             height: auto;
@@ -227,14 +229,16 @@
         }
 
         .swiper-wrapper img {
-            border-radius:50px;
+            border-radius: 50px;
         }
 
-        .swiper-button-next:after, .swiper-button-prev:after {
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
             display: none;
         }
 
-        .swiper-button-next, .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             background: #007396;
             color: #fff;
             border-radius: 50%;
@@ -247,14 +251,17 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        .swiper-button-next:hover, .swiper-button-prev:hover {
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
             background: #fff;
             color: #007396;
         }
 
-        .swiper-button-next span, .swiper-button-prev span{
+        .swiper-button-next span,
+        .swiper-button-prev span {
             margin-top: -12px;
         }
+
         .btn-play {
             position: absolute;
             top: 50%;
@@ -275,18 +282,20 @@
         <div class="btn" onclick="goToPage('page2')">&#8250;</div>
 
         <button id="fullscreen-btn" class="btn bt-full" onclick="openFullscreen(); this.style.display='none';">
-            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
-                <path d="M16 3h3a2 2 0 0 1 2 2v3"/>
-                <path d="M8 21H5a2 2 0 0 1-2-2v-3"/>
-                <path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                <path d="M16 3h3a2 2 0 0 1 2 2v3" />
+                <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+                <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+            </svg>
         </button>
     </div>
 
     <!-- Página 2 -->
     <div class="page" id="page2">
-        <img src="assets/images/bg-page02.jpg" alt="Empreendimentos" style="width:100%; height:100vh; object-fit:cover;" />
+        <img src="assets/images/bg-page02.jpg" alt="Empreendimentos"
+            style="width:100%; height:100vh; object-fit:cover;" />
         <div class="btn back" onclick="goToPage('page1')">&#8249;</div>
         <div style="position:absolute; top: 2%; left: 10%; width: 82%;">
             <div class="container">
@@ -307,7 +316,8 @@
                     </div>
                     <div class="logo-container">
                         <figure>
-                            <img src="assets/images/Floratta.png" alt="Floratta" style="margin-top: -48px; max-width: 200px;">
+                            <img src="assets/images/Floratta.png" alt="Floratta"
+                                style="margin-top: -48px; max-width: 200px;">
                         </figure>
                         <div class="link-btn" onclick="goToPage('floratta')">›</div>
                     </div>
@@ -338,9 +348,12 @@
         <img src="assets/images/bg-page-vistabella.png" alt="Vistabella" style="width:100%; object-fit:cover;" />
         <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
         <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('vistabella-brochura')"><img src="assets/images/bt-brochura-vistabella.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('vistabella-imagens')"><img src="assets/images/bt-imagens-vistabella.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('vistabella-video')"><img src="assets/images/bt-filme-vistabella.png" alt="" width="100%"></div>
+            <div class="link-btn-img brochura" onclick="goToPage('vistabella-brochura')"><img
+                    src="assets/images/bt-brochura-vistabella.png" alt="" width="100%"></div>
+            <div class="link-btn-img imagens" onclick="goToPage('vistabella-imagens')"><img
+                    src="assets/images/bt-imagens-vistabella.png" alt="" width="100%"></div>
+            <div class="link-btn-img video" onclick="goToPage('vistabella-video')"><img
+                    src="assets/images/bt-filme-vistabella.png" alt="" width="100%"></div>
         </div>
     </div>
 
@@ -349,35 +362,107 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
-               <div class="swiper-slide">
-                    <img src="https://www.vistabellaoeiras.com/images/gallery/diferenciais/vista-geral.jpg" alt="" width="100%"/>
-               </div>
-               <div class="swiper-slide">
-                    <img src="https://www.vistabellaoeiras.com/images/gallery/diferenciais/parque-infantil.jpg" alt="" width="100%"/>
-               </div>
-               <div class="swiper-slide">
-                    <img src="https://www.vistabellaoeiras.com/images/gallery/diferenciais/piscina.jpg" alt="" width="100%"/>
-               </div>
-
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/vista-geral.jpg" alt="" width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/parque-infantil.jpg" alt="" width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/piscina.jpg" alt="" width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/area-gourmet.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/spa.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/ginasio.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/diferenciais/areas-verdes.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-sala-estar.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-varanda-gourmet.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-suite-master.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-suite.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-sala.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-varanda.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-lavabo.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-sala.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-suite.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-cz.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/boulevard/bou-piscina.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/boulevard/bou-sala.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/boulevard/bou-suite-master.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/boulevard/bou-lavabo.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/boulevard/bou-cozinha.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/mirador/mir-garden.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/mirador/mir-jardim.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/galeria/vistabella/mirador/mir-suite.jpg" alt="" />
+                </div>
             </div>
             <div class="swiper-button-next"><span>&#8250;</span></div>
             <div class="swiper-button-prev"><span>&#8249;</span></div>
             <span class="swiper-pagination"></span>
-         </div>
-         <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
+        </div>
+        <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
     </div>
 
     <!-- Vídeo Vistabella -->
     <div class="page" id="vistabella-video" style="height: 100vh;">
-        <video id="videoVistabella" class="video" src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <video id="videoVistabella" class="video"
+            src="https://majordevelop.com/images/slider/vistabella/video/FILME_VISTABELLA.mp4" muted controls
+            style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('vistabella');pauseVidVistabella();">&#8249;</div>
-        <img class="btn-play" onclick="playVidVistabella();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <img class="btn-play" onclick="playVidVistabella();this.style.display='none';"
+            src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
     <!-- Brochura Vistabella -->
     <div class="page" id="vistabella-brochura">
         <!-- <iframe src="https://www.viverejamor.com/book/samples/vivere/" style="width:100%; height: 100vh; border:none;"></iframe> -->
-        <iframe src="https://www.vistabellaoeiras.com/brochura/VISTABELLA_BROCHURA.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <iframe src="https://www.vistabellaoeiras.com/brochura/VISTABELLA_BROCHURA.pdf"
+            style="width:100%; height: 100vh; border:none;"></iframe>
         <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
     </div>
 
@@ -386,9 +471,12 @@
         <img src="assets/images/bg-page-tolive.png" alt="ToLive" style="width:100%; object-fit:cover;" />
         <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
         <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('tolive-brochura')"><img src="assets/images/bt-brochura-tolive.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('tolive-imagens')"><img src="assets/images/bt-imagens-tolive.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('tolive-video')"><img src="assets/images/bt-filme-tolive.png" alt="" width="100%"></div>
+            <div class="link-btn-img brochura" onclick="goToPage('tolive-brochura')"><img
+                    src="assets/images/bt-brochura-tolive.png" alt="" width="100%"></div>
+            <div class="link-btn-img imagens" onclick="goToPage('tolive-imagens')"><img
+                    src="assets/images/bt-imagens-tolive.png" alt="" width="100%"></div>
+            <div class="link-btn-img video" onclick="goToPage('tolive-video')"><img
+                    src="assets/images/bt-filme-tolive.png" alt="" width="100%"></div>
         </div>
     </div>
 
@@ -397,34 +485,37 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
-               <div class="swiper-slide">
-                    <img src="https://tolivecascais.com/upload/galeria/GINASIO.jpg" alt="" width="100%"/>
-               </div>
-               <div class="swiper-slide">
-                    <img src="https://tolivecascais.com/upload/galeria/PISCINA-INTERNA.jpg" alt="" width="100%"/>
-               </div>
-               <div class="swiper-slide">
-                    <img src="https://tolivecascais.com/upload/galeria/GARAGEM.jpg" alt="" width="100%"/>
-               </div>
+                <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/GINASIO.jpg" alt="" width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/PISCINA-INTERNA.jpg" alt="" width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://tolivecascais.com/upload/galeria/GARAGEM.jpg" alt="" width="100%" />
+                </div>
 
             </div>
             <div class="swiper-button-next"><span>&#8250;</span></div>
             <div class="swiper-button-prev"><span>&#8249;</span></div>
             <span class="swiper-pagination"></span>
-         </div>
-         <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
+        </div>
+        <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
     </div>
 
     <!-- Vídeo ToLive -->
     <div class="page" id="tolive-video" style="height: 100vh;">
-        <video id="videoTolive" class="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls style="width:100%; height: 100%; object-fit:cover;"></video>
+        <video id="videoTolive" class="video" src="https://tolivecascais.com/upload/video/filme2.mp4" muted controls
+            style="width:100%; height: 100%; object-fit:cover;"></video>
         <div class="btn back" onclick="goToPage('tolive');pauseVidTolive();">&#8249;</div>
-        <img class="btn-play" onclick="playVidTolive();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <img class="btn-play" onclick="playVidTolive();this.style.display='none';"
+            src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
     <!-- Brochura ToLive -->
     <div class="page" id="tolive-brochura">
-        <iframe src="https://tolivecascais.com/brochura/BROCHURA_TOLIVE_DIGITAL.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <iframe src="https://tolivecascais.com/brochura/BROCHURA_TOLIVE_DIGITAL.pdf"
+            style="width:100%; height: 100vh; border:none;"></iframe>
         <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
     </div>
 
@@ -433,9 +524,12 @@
         <img src="assets/images/bg-page-floratta.png" alt="floratta" style="width:100%; object-fit:cover;" />
         <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
         <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('floratta-brochura')"><img src="assets/images/bt-brochura-floratta.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('floratta-imagens')"><img src="assets/images/bt-imagens-floratta.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('floratta-video')"><img src="assets/images/bt-filme-floratta.png" alt="" width="100%"></div>
+            <div class="link-btn-img brochura" onclick="goToPage('floratta-brochura')"><img
+                    src="assets/images/bt-brochura-floratta.png" alt="" width="100%"></div>
+            <div class="link-btn-img imagens" onclick="goToPage('floratta-imagens')"><img
+                    src="assets/images/bt-imagens-floratta.png" alt="" width="100%"></div>
+            <div class="link-btn-img video" onclick="goToPage('floratta-video')"><img
+                    src="assets/images/bt-filme-floratta.png" alt="" width="100%"></div>
         </div>
     </div>
 
@@ -444,19 +538,21 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
-               <div class="swiper-slide">
-                    <img src="https://www.florattacascais.com/assets/images/fotos/002_Pisc_A_02.jpg" alt="" width="100%"/>
-               </div>
-               <div class="swiper-slide">
-                    <img src="https://www.florattacascais.com/assets/images/fotos/003_Pisc_B_02.jpg" alt="" width="100%"/>
-               </div>
+                <div class="swiper-slide">
+                    <img src="https://www.florattacascais.com/assets/images/fotos/002_Pisc_A_02.jpg" alt=""
+                        width="100%" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.florattacascais.com/assets/images/fotos/003_Pisc_B_02.jpg" alt=""
+                        width="100%" />
+                </div>
 
             </div>
             <div class="swiper-button-next"><span>&#8250;</span></div>
             <div class="swiper-button-prev"><span>&#8249;</span></div>
             <span class="swiper-pagination"></span>
-         </div>
-         <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
+        </div>
+        <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
     </div>
 
     <!-- Vídeo Floratta -->
@@ -465,12 +561,14 @@
             <source src="https://www.florattacascais.com/assets/video/filme.mp4" type="video/mp4">
         </video>
         <div class="btn back" onclick="goToPage('floratta');pauseVidFloratta();">&#8249;</div>
-        <img class="btn-play" onclick="playVidFloratta();this.style.display='none';" src="assets/images/botao-reproduzir.png" alt=""/>
+        <img class="btn-play" onclick="playVidFloratta();this.style.display='none';"
+            src="assets/images/botao-reproduzir.png" alt="" />
     </div>
 
     <!-- Brochura Floratta -->
     <div class="page" id="floratta-brochura">
-        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf"
+            style="width:100%; height: 100vh; border:none;"></iframe>
         <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
     </div>
 
@@ -481,7 +579,7 @@
             document.getElementById(pageId).classList.add('active');
         }
     </script>
-    
+
     <script>
         const btnFull = document.getElementById('fullscreen-btn');
 
@@ -535,24 +633,24 @@
     </script>
 
     <!-- Initialize Swiper -->
-   <script src="assets/scripts/swiper-bundle.min.js"></script>
-   <script>
-   var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      keyboard: {
-            enabled: true,
-      },
-      /* autoplay: {
-            delay: 12000,
-            disableOnInteraction: false,
-      }, */
-      navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-      },
-   });
-   </script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            keyboard: {
+                enabled: true,
+            },
+            /* autoplay: {
+                  delay: 12000,
+                  disableOnInteraction: false,
+            }, */
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <script>
         var videoVistabella = document.getElementById("videoVistabella");
@@ -563,7 +661,7 @@
 
         function pauseVidVistabella() {
             videoVistabella.pause();
-        } 
+        }
 
         var videoTolive = document.getElementById("videoTolive");
 
@@ -573,7 +671,7 @@
 
         function pauseVidTolive() {
             videoTolive.pause();
-        } 
+        }
 
         var videoFloratta = document.getElementById("videoFloratta");
 
@@ -601,4 +699,5 @@
 
 
 </body>
+
 </html>
