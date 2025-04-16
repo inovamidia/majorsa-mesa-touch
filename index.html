@@ -760,7 +760,30 @@
 
     <!-- Brochura Floratta -->
     <div class="page" id="floratta-brochura">
-        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="swiper book mySwiper">
+            <div id="swiper-container3" class="swiper-wrapper">
+
+                <script>
+                    let container3 = document.getElementById("swiper-container3");
+                    let l = 0;
+                
+                    while (l <= 73) {
+                        let formattedNumber = l.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                        let slide = `
+                            <div class="swiper-slide">
+                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                            </div>
+                        `;
+                        container3.innerHTML += slide; // Adiciona o HTML ao contêiner
+                        l++;
+                    }
+                </script>
+
+            </div>
+            <div class="book swiper-button-next"><span>&#8250;</span></div>
+            <div class="book swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+        </div>
         <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
     </div>
 
@@ -867,7 +890,29 @@
 
     <!-- Brochura Fiori -->
     <div class="page" id="fiori-brochura">
-        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="swiper book mySwiper">
+            <div id="swiper-container4" class="swiper-wrapper">
+                <script>
+                    let container4 = document.getElementById("swiper-container4");
+                    let m = 0
+                
+                    while (m <= 73) {
+                        let formattedNumber = m.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                        let slide = `
+                            <div class="swiper-slide">
+                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                            </div>
+                        `;
+                        container4.innerHTML += slide; // Adiciona o HTML ao contêiner
+                        m++
+                    }
+                </script>
+
+            </div>
+            <div class="book swiper-button-next"><span>&#8250;</span></div>
+            <div class="book swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+        </div>
         <div class="btn back" onclick="goToPage('fiori')">&#8249;</div>
     </div>
 
@@ -974,7 +1019,29 @@
 
     <!-- Brochura Troia -->
     <div class="page" id="troia-brochura">
-        <iframe src="https://www.florattacascais.com/assets/pdf/digital.pdf" style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="swiper book mySwiper">
+            <div id="swiper-container5" class="swiper-wrapper">
+                <script>
+                    let container5 = document.getElementById("swiper-container5");
+                    let n = 0
+                
+                    while (n <= 73) {
+                        let formattedNumber = n.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                        let slide = `
+                            <div class="swiper-slide">
+                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                            </div>
+                        `;
+                        container5.innerHTML += slide; // Adiciona o HTML ao contêiner
+                        n++
+                    }
+                </script>
+
+            </div>
+            <div class="book swiper-button-next"><span>&#8250;</span></div>
+            <div class="book swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+        </div>
         <div class="btn back" onclick="goToPage('troia')">&#8249;</div>
     </div>
 
