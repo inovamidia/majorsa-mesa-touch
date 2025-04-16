@@ -498,7 +498,7 @@
             <span class="swiper-pagination"></span>
         </div>
 
-        <div class="btn back" onclick="goToPage('vistabella');returnToFirstSlide();">&#8249;</div>
+        <div class="btn back" onclick="goToPage('vistabella');resetSwiper();">&#8249;</div>
     </div>
 
     <!-- Página ToLive (Exemplo) -->
@@ -820,9 +820,20 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-        // Função para retornar ao slide inicial
-        function returnToFirstSlide() {
-            swiper.slideTo(0); // Move para o primeiro slide (índice 0)
+        // Função para resetar o swiper
+        function resetSwiper() {
+            const wrapper = document.querySelector('.swiper-wrapper');
+            const prevButton = document.querySelector('.swiper-button-prev');
+
+            // Define o estilo inline do wrapper
+            wrapper.style.transform = 'translate3d(0px, 0px, 0px)';
+            wrapper.style.transition = 'transform 0.3s ease'; // Animação suave opcional
+
+            // Reinicia o swiper para o slide inicial
+            swiper.slideTo(0);
+
+            // Adiciona a classe "swiper-button-disabled" ao botão anterior
+            prevButton.classList.add('swiper-button-disabled');
         }
     </script>
 
