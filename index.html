@@ -152,7 +152,7 @@
 
         .logo-container figure img {
             height: auto;
-            max-width: 220px;
+            max-width: 200px;
         }
 
         .logo-link {
@@ -328,7 +328,7 @@
                     <div class="logo-container">
                         <figure>
                             <img src="assets/images/Floratta.png" alt="Floratta"
-                                style="margin-top: -48px; max-width: 200px;">
+                                style="margin-top: -38px; max-width: 180px;">
                         </figure>
                         <div class="link-btn" onclick="goToPage('floratta')">›</div>
                     </div>
@@ -830,7 +830,7 @@
         }
 
         function pauseVidVistabella() {
-            videoVistabella.pause();
+            videoVistabella.stop();
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
@@ -843,7 +843,7 @@
         }
 
         function pauseVidTolive() {
-            videoTolive.pause();
+            videoTolive.stop();
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
@@ -856,7 +856,7 @@
         }
 
         function pauseVidFloratta() {
-            videoFloratta.pause();
+            videoFloratta.stop();
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
