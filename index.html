@@ -498,8 +498,7 @@
             <span class="swiper-pagination"></span>
         </div>
 
-        <div class="btn back" onclick="resetSwiper();">voltar</div>
-        <!-- <div class="btn back" onclick="goToPage('vistabella');resetSwiper();">&#8249;</div> -->
+        <div class="btn back" onclick="goToPage('vistabella');">&#8249;</div>
     </div>
 
     <!-- Página ToLive (Exemplo) -->
@@ -748,6 +747,7 @@
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
+            resetSwiper(); // Resetar todos os Swipers quando mudar de página
         }
     </script>
 
@@ -773,6 +773,7 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
+                resetSwiper(); // Resetar todos os Swipers quando mudar de página
             } else {
                 btnFull.style.display = 'none';
             }
@@ -785,6 +786,7 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
+                resetSwiper(); // Resetar todos os Swipers quando mudar de página
             } else {
                 btnFull.style.display = 'none';
             }
@@ -797,6 +799,7 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
+                resetSwiper(); // Resetar todos os Swipers quando mudar de página
             } else {
                 btnFull.style.display = 'none';
             }
