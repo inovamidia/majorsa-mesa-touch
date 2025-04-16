@@ -830,7 +830,8 @@
         }
 
         function pauseVidVistabella() {
-            videoVistabella.stop();
+            videoVistabella.pause();
+            videoVistabella.currentTime = 0;
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
@@ -843,7 +844,8 @@
         }
 
         function pauseVidTolive() {
-            videoTolive.stop();
+            videoTolive.pause();
+            videoTolive.currentTime = 0;
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
@@ -856,7 +858,8 @@
         }
 
         function pauseVidFloratta() {
-            videoFloratta.stop();
+            videoFloratta.pause();
+            videoFloratta.currentTime = 0;
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
