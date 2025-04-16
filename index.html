@@ -618,8 +618,30 @@
 
     <!-- Brochura ToLive -->
     <div class="page" id="tolive-brochura">
-        <iframe src="https://tolivecascais.com/brochura/BROCHURA_TOLIVE_DIGITAL.pdf"
-            style="width:100%; height: 100vh; border:none;"></iframe>
+        <div class="swiper book mySwiper">
+            <div id="swiper-container2" class="swiper-wrapper">
+
+                <script>
+                    let container2 = document.getElementById("swiper-container2");
+                    let j = 0;
+                
+                    while (j <= 73) {
+                        let formattedNumber = j.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                        let slide = `
+                            <div class="swiper-slide">
+                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                            </div>
+                        `;
+                        container2.innerHTML += slide; // Adiciona o HTML ao contêiner
+                        j++;
+                    }
+                </script>
+
+            </div>
+            <div class="book swiper-button-next"><span>&#8250;</span></div>
+            <div class="book swiper-button-prev"><span>&#8249;</span></div>
+            <span class="swiper-pagination"></span>
+        </div>
         <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
     </div>
 
@@ -963,7 +985,7 @@
             document.getElementById(pageId).classList.add('active');
             setTimeout(() => {
                 resetSwiper(); // Resetar todos os Swipers quando mudar de página
-            }, 6000); // Chamar a função após 6 segundos
+            }, 2000); // Chamar a função após 2 segundos
         }
     </script>
 
@@ -991,7 +1013,7 @@
                 pauseVidFloratta();
                 setTimeout(() => {
                     resetSwiper(); // Resetar todos os Swipers quando mudar de página
-                }, 6000); // Chamar a função após 6 segundos
+                }, 2000); // Chamar a função após 2 segundos
             } else {
                 btnFull.style.display = 'none';
             }
@@ -1006,7 +1028,7 @@
                 pauseVidFloratta();
                 setTimeout(() => {
                     resetSwiper(); // Resetar todos os Swipers quando mudar de página
-                }, 6000); // Chamar a função após 6 segundos
+                }, 2000); // Chamar a função após 2 segundos
             } else {
                 btnFull.style.display = 'none';
             }
@@ -1021,7 +1043,7 @@
                     pauseVidFloratta();
                     setTimeout(() => {
                         resetSwiper(); // Resetar todos os Swipers quando mudar de página
-                    }, 6000); // Chamar a função após 6 segundos
+                    }, 2000); // Chamar a função após 2 segundos
             } else {
                 btnFull.style.display = 'none';
             }
