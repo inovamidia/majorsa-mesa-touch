@@ -773,7 +773,9 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
-                resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                setTimeout(() => {
+                    resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                }, 10000); // Chamar a função após 10 segundos
             } else {
                 btnFull.style.display = 'none';
             }
@@ -786,7 +788,9 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
-                resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                setTimeout(() => {
+                    resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                }, 10000); // Chamar a função após 10 segundos
             } else {
                 btnFull.style.display = 'none';
             }
@@ -795,11 +799,13 @@
         document.addEventListener('msfullscreenchange', () => {
             if (!document.msFullscreenElement) {
                 btnFull.style.display = 'block';
-                goToPage('page1');
-                pauseVidVistabella();
-                pauseVidTolive();
-                pauseVidFloratta();
-                resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                    goToPage('page1');
+                    pauseVidVistabella();
+                    pauseVidTolive();
+                    pauseVidFloratta();
+                    setTimeout(() => {
+                        resetSwiper(); // Resetar todos os Swipers quando mudar de página
+                    }, 10000); // Chamar a função após 10 segundos
             } else {
                 btnFull.style.display = 'none';
             }
