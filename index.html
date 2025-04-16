@@ -498,7 +498,7 @@
             <span class="swiper-pagination"></span>
         </div>
 
-        <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
+        <div class="btn back" onclick="goToPage('vistabella');returnToFirstSlide();">&#8249;</div>
     </div>
 
     <!-- Página ToLive (Exemplo) -->
@@ -820,6 +820,10 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        // Função para retornar ao slide inicial
+        function returnToFirstSlide() {
+            swiper.slideTo(0); // Move para o primeiro slide (índice 0)
+        }
     </script>
 
     <script>
@@ -846,7 +850,7 @@
         function pauseVidTolive() {
             videoTolive.pause();
             advanceByFrames(16);
-            videoTolive.currentTime = 16;
+            videoTolive.currentTime = 1;
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
             document.querySelector(".btn-play.floratta").style.display = "block";
