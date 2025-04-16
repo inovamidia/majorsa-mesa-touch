@@ -282,767 +282,783 @@
             height: 128px;
             cursor: pointer;
         }
+
+        #mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Cor de fundo opcional */
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Página 1 -->
-    <div class="page active" id="page1">
-        <img src="assets/images/capa.png" alt="Bem-vindo" style="width:100%; height:60vh; object-fit:cover;" />
-        <div class="btn" onclick="goToPage('page2')">&#8250;</div>
-
-        <button id="fullscreen-btn" class="btn bt-full" onclick="openFullscreen(); this.style.display='none';">
-            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
-                stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 3H5a2 2 0 0 0-2 2v3" />
-                <path d="M16 3h3a2 2 0 0 1 2 2v3" />
-                <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
-                <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
-            </svg>
-        </button>
+    <div id="mobile" style="display: none;">
+        <h1 class="info">Resolução inadequada para a exibição deste projeto. Por favor, acesse em algum dispositivo que tenha uma resolução maior.</h1>
     </div>
 
-    <!-- Página 2 -->
-    <div class="page" id="page2">
-        <img src="assets/images/bg-page02.jpg" alt="Empreendimentos"
-            style="width:100%; height:100vh; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page1')">&#8249;</div>
-        <div style="position:absolute; top: 2%; left: 10%; width: 82%;">
-            <div class="container">
-                <h2>Empreendimentos <b>lançados</b></h2>
-                <p>Launched ventures</p>
-                <div class="section">
-                    <div class="logo-container">
-                        <figure>
-                            <img src="assets/images/Vistabella.png" alt="Vistabella">
-                        </figure>
-                        <div class="link-btn" onclick="goToPage('vistabella')">›</div>
+    <div id="desktop">
+        <!-- Página 1 -->
+        <div class="page active" id="page1">
+            <img src="assets/images/capa.png" alt="Bem-vindo" style="width:100%; height:60vh; object-fit:cover;" />
+            <div class="btn" onclick="goToPage('page2')">&#8250;</div>
+
+            <button id="fullscreen-btn" class="btn bt-full" onclick="openFullscreen(); this.style.display='none';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                    stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                    <path d="M16 3h3a2 2 0 0 1 2 2v3" />
+                    <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+                    <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Página 2 -->
+        <div class="page" id="page2">
+            <img src="assets/images/bg-page02.jpg" alt="Empreendimentos"
+                style="width:100%; height:100vh; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page1')">&#8249;</div>
+            <div style="position:absolute; top: 2%; left: 10%; width: 82%;">
+                <div class="container">
+                    <h2>Empreendimentos <b>lançados</b></h2>
+                    <p>Launched ventures</p>
+                    <div class="section">
+                        <div class="logo-container">
+                            <figure>
+                                <img src="assets/images/Vistabella.png" alt="Vistabella">
+                            </figure>
+                            <div class="link-btn" onclick="goToPage('vistabella')">›</div>
+                        </div>
+                        <div class="logo-container">
+                            <figure>
+                                <img src="assets/images/ToLive.png" alt="To LIVE">
+                            </figure>
+                            <div class="link-btn" onclick="goToPage('tolive')">›</div>
+                        </div>
+                        <div class="logo-container">
+                            <figure>
+                                <img src="assets/images/Floratta.png" alt="Floratta"
+                                    style="margin-top: -38px; max-width: 180px;">
+                            </figure>
+                            <div class="link-btn" onclick="goToPage('floratta')">›</div>
+                        </div>
                     </div>
-                    <div class="logo-container">
-                        <figure>
-                            <img src="assets/images/ToLive.png" alt="To LIVE">
-                        </figure>
-                        <div class="link-btn" onclick="goToPage('tolive')">›</div>
-                    </div>
-                    <div class="logo-container">
-                        <figure>
-                            <img src="assets/images/Floratta.png" alt="Floratta"
-                                style="margin-top: -38px; max-width: 180px;">
-                        </figure>
-                        <div class="link-btn" onclick="goToPage('floratta')">›</div>
-                    </div>
-                </div>
-                <div class="div-hr"></div>
-                <h2><b>Futuros</b> empreendimentos</h2>
-                <p>Future ventures</p>
-                <div class="section">
-                    <div class="logo-container">
-                        <figure>
-                            <img src="assets/images/Fiori.png" alt="Fiori">
-                        </figure>
-                        <div class="link-btn" onclick="goToPage('fiori')">›</div>
-                    </div>
-                    <div class="logo-container">
-                        <figure>
-                            <img src="assets/images/Troia.png" alt="Tróia">
-                        </figure>
-                        <div class="link-btn" onclick="goToPage('troia')">›</div>
+                    <div class="div-hr"></div>
+                    <h2><b>Futuros</b> empreendimentos</h2>
+                    <p>Future ventures</p>
+                    <div class="section">
+                        <div class="logo-container">
+                            <figure>
+                                <img src="assets/images/Fiori.png" alt="Fiori">
+                            </figure>
+                            <div class="link-btn" onclick="goToPage('fiori')">›</div>
+                        </div>
+                        <div class="logo-container">
+                            <figure>
+                                <img src="assets/images/Troia.png" alt="Tróia">
+                            </figure>
+                            <div class="link-btn" onclick="goToPage('troia')">›</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Página Vistabella (Exemplo) -->
-    <div class="page" id="vistabella">
-        <img src="assets/images/bg-page-vistabella.png" alt="Vistabella" style="width:100%; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
-        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('vistabella-brochura')"><img
-                    src="assets/images/bt-brochura-vistabella.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('vistabella-imagens')"><img
-                    src="assets/images/bt-imagens-vistabella.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('vistabella-video')"><img
-                    src="assets/images/bt-filme-vistabella.png" alt="" width="100%"></div>
-        </div>
-    </div>
-
-    <!-- Imagens Vistabella -->
-    <div class="page" id="vistabella-imagens">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/vista-geral.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/parque-infantil.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/piscina.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/area-gourmet.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/spa.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/ginasio.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/diferenciais/areas-verdes.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-sala-estar.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-varanda-gourmet.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-suite-master.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-suite.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-sala.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-varanda.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-lavabo.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-sala.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-suite.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-cz.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/boulevard/bou-piscina.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/boulevard/bou-sala.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/boulevard/bou-suite-master.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/boulevard/bou-lavabo.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/boulevard/bou-cozinha.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/mirador/mir-garden.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/mirador/mir-jardim.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/vistabella/mirador/mir-suite.jpg" alt="" width="100%" />
-                </div>
+        <!-- Página Vistabella (Exemplo) -->
+        <div class="page" id="vistabella">
+            <img src="assets/images/bg-page-vistabella.png" alt="Vistabella" style="width:100%; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+            <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+                <div class="link-btn-img brochura" onclick="goToPage('vistabella-brochura')"><img
+                        src="assets/images/bt-brochura-vistabella.png" alt="" width="100%"></div>
+                <div class="link-btn-img imagens" onclick="goToPage('vistabella-imagens')"><img
+                        src="assets/images/bt-imagens-vistabella.png" alt="" width="100%"></div>
+                <div class="link-btn-img video" onclick="goToPage('vistabella-video')"><img
+                        src="assets/images/bt-filme-vistabella.png" alt="" width="100%"></div>
             </div>
-            <div class="swiper-button-next"><span>&#8250;</span></div>
-            <div class="swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
         </div>
-        <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
-    </div>
 
-    <!-- Vídeo Vistabella -->
-    <div class="page" id="vistabella-video" style="height: 100vh;">
-        <video id="videoVistabella" class="video"
-            src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-vistabella.mp4" muted controls
-            style="width:100%; height: 100%; object-fit:cover;"></video>
-        <div class="btn back" onclick="goToPage('vistabella');pauseVidVistabella();">&#8249;</div>
-        <img class="btn-play vistabella" onclick="playVidVistabella();this.style.display='none';"
-            src="assets/images/botao-reproduzir.png" alt="" />
-    </div>
+        <!-- Imagens Vistabella -->
+        <div class="page" id="vistabella-imagens">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
 
-    <!-- Brochura Vistabella -->
-    <div class="page" id="vistabella-brochura">
-        <!-- <iframe src="https://www.viverejamor.com/book/samples/vivere/" style="width:100%; height: 100vh; border:none;"></iframe> -->
-        <!-- <iframe src="https://www.vistabellaoeiras.com/brochura/VISTABELLA_BROCHURA.pdf" style="width:100%; height: 100vh; border:none;"></iframe> -->
-        <div class="swiper book mySwiper">
-            <div id="swiper-container" class="swiper-wrapper">
-
-                <script>
-                    let container = document.getElementById("swiper-container");
-                    let i = 0;
-                
-                    while (i <= 73) {
-                        let formattedNumber = i.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
-                        let slide = `
-                            <div class="swiper-slide">
-                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
-                            </div>
-                        `;
-                        container.innerHTML += slide; // Adiciona o HTML ao contêiner
-                        i++;
-                    }
-                </script>
-
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/vista-geral.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/parque-infantil.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/piscina.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/area-gourmet.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/spa.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/ginasio.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/diferenciais/areas-verdes.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-sala-estar.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-varanda-gourmet.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-suite-master.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-suite.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-sala.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-varanda.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-lavabo.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-penthouse.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-sala.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-suite.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/panorama/pan-penthouse-cz.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/boulevard/bou-piscina.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/boulevard/bou-sala.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/boulevard/bou-suite-master.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/boulevard/bou-lavabo.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/boulevard/bou-cozinha.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/mirador/mir-garden.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/mirador/mir-jardim.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/vistabella/mirador/mir-suite.jpg" alt="" width="100%" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"><span>&#8250;</span></div>
+                <div class="swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="book swiper-button-next"><span>&#8250;</span></div>
-            <div class="book swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+            <div class="btn back" onclick="goToPage('vistabella')">&#8249;</div>
         </div>
 
-        <div class="btn back" onclick="goToPage('vistabella');">&#8249;</div>
-    </div>
-
-    <!-- Página ToLive (Exemplo) -->
-    <div class="page" id="tolive">
-        <img src="assets/images/bg-page-tolive.png" alt="ToLive" style="width:100%; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
-        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('tolive-brochura')"><img
-                    src="assets/images/bt-brochura-tolive.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('tolive-imagens')"><img
-                    src="assets/images/bt-imagens-tolive.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('tolive-video')"><img
-                    src="assets/images/bt-filme-tolive.png" alt="" width="100%"></div>
+        <!-- Vídeo Vistabella -->
+        <div class="page" id="vistabella-video" style="height: 100vh;">
+            <video id="videoVistabella" class="video"
+                src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-vistabella.mp4" muted controls
+                style="width:100%; height: 100%; object-fit:cover;"></video>
+            <div class="btn back" onclick="goToPage('vistabella');pauseVidVistabella();">&#8249;</div>
+            <img class="btn-play vistabella" onclick="playVidVistabella();this.style.display='none';"
+                src="assets/images/botao-reproduzir.png" alt="" />
         </div>
-    </div>
 
-    <!-- Imagens ToLive -->
-    <div class="page" id="tolive-imagens">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+        <!-- Brochura Vistabella -->
+        <div class="page" id="vistabella-brochura">
+            <!-- <iframe src="https://www.viverejamor.com/book/samples/vivere/" style="width:100%; height: 100vh; border:none;"></iframe> -->
+            <!-- <iframe src="https://www.vistabellaoeiras.com/brochura/VISTABELLA_BROCHURA.pdf" style="width:100%; height: 100vh; border:none;"></iframe> -->
+            <div class="swiper book mySwiper">
+                <div id="swiper-container" class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/FACHADA-1.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/FACHADA-2.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/FACHADA-3.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/FACHADA-4.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/VARANDA.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/SUITE-MASTER-1.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/SUITE-MASTER-2.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/SAUNA.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/SALA-DE-REUNIAO.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/SALA-DE-MASSAGEM.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/ROOFTOP.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/RECEPCAO.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/PISCINA-INTERNA.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/LOUNGE-GARAGEM.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/LOUNGE.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/LIVING.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/JACUZZI.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/IMPLANTACAO-1.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/IMPLANTACAO-2.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/GINASIO.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/GARAGEM.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/ESTACAO-BIKE.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/ESPACO-PET.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/ESPACO-ENTREGAS.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/DUCHE-SPA.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/tolive/AREA-DE-SERVICO.jpg" alt="" width="100%" />
-                </div>
+                    <script>
+                        let container = document.getElementById("swiper-container");
+                        let i = 0;
+                    
+                        while (i <= 73) {
+                            let formattedNumber = i.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                            let slide = `
+                                <div class="swiper-slide">
+                                    <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                                </div>
+                            `;
+                            container.innerHTML += slide; // Adiciona o HTML ao contêiner
+                            i++;
+                        }
+                    </script>
 
+                </div>
+                <div class="book swiper-button-next"><span>&#8250;</span></div>
+                <div class="book swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="swiper-button-next"><span>&#8250;</span></div>
-            <div class="swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+
+            <div class="btn back" onclick="goToPage('vistabella');">&#8249;</div>
         </div>
-        <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
-    </div>
 
-    <!-- Vídeo ToLive -->
-    <div class="page" id="tolive-video" style="height: 100vh;">
-        <video id="videoTolive" class="video" src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-tolive.mp4" muted controls
-            style="width:100%; height: 100%; object-fit:cover;"></video>
-        <div class="btn back" onclick="goToPage('tolive');pauseVidTolive();">&#8249;</div>
-        <img class="btn-play tolive" onclick="playVidTolive();this.style.display='none';"
-            src="assets/images/botao-reproduzir.png" alt="" />
-    </div>
-
-    <!-- Brochura ToLive -->
-    <div class="page" id="tolive-brochura">
-        <div class="swiper book mySwiper">
-            <div id="swiper-container2" class="swiper-wrapper">
-
-                <script>
-                    let container2 = document.getElementById("swiper-container2");
-                    let j = 0;
-                
-                    while (j <= 73) {
-                        let formattedNumber = j.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
-                        let slide = `
-                            <div class="swiper-slide">
-                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
-                            </div>
-                        `;
-                        container2.innerHTML += slide; // Adiciona o HTML ao contêiner
-                        j++;
-                    }
-                </script>
-
+        <!-- Página ToLive (Exemplo) -->
+        <div class="page" id="tolive">
+            <img src="assets/images/bg-page-tolive.png" alt="ToLive" style="width:100%; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+            <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+                <div class="link-btn-img brochura" onclick="goToPage('tolive-brochura')"><img
+                        src="assets/images/bt-brochura-tolive.png" alt="" width="100%"></div>
+                <div class="link-btn-img imagens" onclick="goToPage('tolive-imagens')"><img
+                        src="assets/images/bt-imagens-tolive.png" alt="" width="100%"></div>
+                <div class="link-btn-img video" onclick="goToPage('tolive-video')"><img
+                        src="assets/images/bt-filme-tolive.png" alt="" width="100%"></div>
             </div>
-            <div class="book swiper-button-next"><span>&#8250;</span></div>
-            <div class="book swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
         </div>
-        <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
-    </div>
 
-    <!-- Página Floratta (Exemplo) -->
-    <div class="page" id="floratta">
-        <img src="assets/images/bg-page-floratta.png" alt="floratta" style="width:100%; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
-        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('floratta-brochura')"><img
-                    src="assets/images/bt-brochura-floratta.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('floratta-imagens')"><img
-                    src="assets/images/bt-imagens-floratta.png" alt="" width="100%"></div>
-            <div class="link-btn-img video" onclick="goToPage('floratta-video')"><img
-                    src="assets/images/bt-filme-floratta.png" alt="" width="100%"></div>
-        </div>
-    </div>
+        <!-- Imagens ToLive -->
+        <div class="page" id="tolive-imagens">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
 
-    <!-- Imagens Floratta -->
-    <div class="page" id="floratta-imagens">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/FACHADA-1.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/FACHADA-2.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/FACHADA-3.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/FACHADA-4.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/VARANDA.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/SUITE-MASTER-1.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/SUITE-MASTER-2.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/SAUNA.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/SALA-DE-REUNIAO.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/SALA-DE-MASSAGEM.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/ROOFTOP.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/RECEPCAO.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/PISCINA-INTERNA.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/LOUNGE-GARAGEM.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/LOUNGE.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/LIVING.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/JACUZZI.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/IMPLANTACAO-1.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/IMPLANTACAO-2.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/GINASIO.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/GARAGEM.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/ESTACAO-BIKE.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/ESPACO-PET.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/ESPACO-ENTREGAS.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/DUCHE-SPA.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/tolive/AREA-DE-SERVICO.jpg" alt="" width="100%" />
+                    </div>
 
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
-                </div>
-
+                <div class="swiper-button-next"><span>&#8250;</span></div>
+                <div class="swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="swiper-button-next"><span>&#8250;</span></div>
-            <div class="swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+            <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
         </div>
-        <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
-    </div>
 
-    <!-- Vídeo Floratta -->
-    <div class="page" id="floratta-video" style="height: 100vh;">
-        <video id="videoFloratta" class="video" style="width:100%; height: 100%; object-fit:cover;" controls muted>
-            <source src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-floratta.mp4" type="video/mp4">
-        </video>
-        <div class="btn back" onclick="goToPage('floratta');pauseVidFloratta();">&#8249;</div>
-        <img class="btn-play floratta" onclick="playVidFloratta();this.style.display='none';"
-            src="assets/images/botao-reproduzir.png" alt="" />
-    </div>
+        <!-- Vídeo ToLive -->
+        <div class="page" id="tolive-video" style="height: 100vh;">
+            <video id="videoTolive" class="video" src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-tolive.mp4" muted controls
+                style="width:100%; height: 100%; object-fit:cover;"></video>
+            <div class="btn back" onclick="goToPage('tolive');pauseVidTolive();">&#8249;</div>
+            <img class="btn-play tolive" onclick="playVidTolive();this.style.display='none';"
+                src="assets/images/botao-reproduzir.png" alt="" />
+        </div>
 
-    <!-- Brochura Floratta -->
-    <div class="page" id="floratta-brochura">
-        <div class="swiper book mySwiper">
-            <div id="swiper-container3" class="swiper-wrapper">
+        <!-- Brochura ToLive -->
+        <div class="page" id="tolive-brochura">
+            <div class="swiper book mySwiper">
+                <div id="swiper-container2" class="swiper-wrapper">
 
-                <script>
-                    let container3 = document.getElementById("swiper-container3");
-                    let l = 0;
-                
-                    while (l <= 73) {
-                        let formattedNumber = l.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
-                        let slide = `
-                            <div class="swiper-slide">
-                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
-                            </div>
-                        `;
-                        container3.innerHTML += slide; // Adiciona o HTML ao contêiner
-                        l++;
-                    }
-                </script>
+                    <script>
+                        let container2 = document.getElementById("swiper-container2");
+                        let j = 0;
+                    
+                        while (j <= 73) {
+                            let formattedNumber = j.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                            let slide = `
+                                <div class="swiper-slide">
+                                    <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                                </div>
+                            `;
+                            container2.innerHTML += slide; // Adiciona o HTML ao contêiner
+                            j++;
+                        }
+                    </script>
 
+                </div>
+                <div class="book swiper-button-next"><span>&#8250;</span></div>
+                <div class="book swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="book swiper-button-next"><span>&#8250;</span></div>
-            <div class="book swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+            <div class="btn back" onclick="goToPage('tolive')">&#8249;</div>
         </div>
-        <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
-    </div>
 
-    <!-- Página fiori (Exemplo) -->
-    <div class="page" id="fiori">
-        <img src="assets/images/bg-page-fiori.png" alt="fiori" style="width:100%; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
-        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('fiori-brochura')"><img
-                    src="assets/images/bt-plan-fiori.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('fiori-imagens')"><img
-                    src="assets/images/bt-imagens-fiori.png" alt="" width="100%"></div>
-        </div>
-    </div>
-
-    <!-- Imagens Fiori -->
-    <div class="page" id="fiori-imagens">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
-                </div>
-
+        <!-- Página Floratta (Exemplo) -->
+        <div class="page" id="floratta">
+            <img src="assets/images/bg-page-floratta.png" alt="floratta" style="width:100%; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+            <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+                <div class="link-btn-img brochura" onclick="goToPage('floratta-brochura')"><img
+                        src="assets/images/bt-brochura-floratta.png" alt="" width="100%"></div>
+                <div class="link-btn-img imagens" onclick="goToPage('floratta-imagens')"><img
+                        src="assets/images/bt-imagens-floratta.png" alt="" width="100%"></div>
+                <div class="link-btn-img video" onclick="goToPage('floratta-video')"><img
+                        src="assets/images/bt-filme-floratta.png" alt="" width="100%"></div>
             </div>
-            <div class="swiper-button-next"><span>&#8250;</span></div>
-            <div class="swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
         </div>
-        <div class="btn back" onclick="goToPage('fiori')">&#8249;</div>
-    </div>
 
-    <!-- Brochura Fiori -->
-    <div class="page" id="fiori-brochura">
-        <div class="swiper book mySwiper">
-            <div id="swiper-container4" class="swiper-wrapper">
-                <script>
-                    let container4 = document.getElementById("swiper-container4");
-                    let m = 0
-                
-                    while (m <= 73) {
-                        let formattedNumber = m.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
-                        let slide = `
-                            <div class="swiper-slide">
-                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
-                            </div>
-                        `;
-                        container4.innerHTML += slide; // Adiciona o HTML ao contêiner
-                        m++
-                    }
-                </script>
+        <!-- Imagens Floratta -->
+        <div class="page" id="floratta-imagens">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
 
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"><span>&#8250;</span></div>
+                <div class="swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="book swiper-button-next"><span>&#8250;</span></div>
-            <div class="book swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+            <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
         </div>
-        <div class="btn back" onclick="goToPage('fiori')">&#8249;</div>
-    </div>
 
-    <!-- Página Troia (Exemplo) --> 
-    <div class="page" id="troia">
-        <img src="assets/images/bg-page-troia.png" alt="troia" style="width:100%; object-fit:cover;" />
-        <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
-        <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
-            <div class="link-btn-img brochura" onclick="goToPage('troia-brochura')"><img
-                    src="assets/images/bt-plan-troia.png" alt="" width="100%"></div>
-            <div class="link-btn-img imagens" onclick="goToPage('troia-imagens')"><img
-                    src="assets/images/bt-imagens-troia.png" alt="" width="100%"></div>
+        <!-- Vídeo Floratta -->
+        <div class="page" id="floratta-video" style="height: 100vh;">
+            <video id="videoFloratta" class="video" style="width:100%; height: 100%; object-fit:cover;" controls muted>
+                <source src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/videos/filme-floratta.mp4" type="video/mp4">
+            </video>
+            <div class="btn back" onclick="goToPage('floratta');pauseVidFloratta();">&#8249;</div>
+            <img class="btn-play floratta" onclick="playVidFloratta();this.style.display='none';"
+                src="assets/images/botao-reproduzir.png" alt="" />
         </div>
-    </div>
 
-    <!-- Imagens Troia -->
-    <div class="page" id="troia-imagens">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+        <!-- Brochura Floratta -->
+        <div class="page" id="floratta-brochura">
+            <div class="swiper book mySwiper">
+                <div id="swiper-container3" class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
-                </div>
+                    <script>
+                        let container3 = document.getElementById("swiper-container3");
+                        let l = 0;
+                    
+                        while (l <= 73) {
+                            let formattedNumber = l.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                            let slide = `
+                                <div class="swiper-slide">
+                                    <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                                </div>
+                            `;
+                            container3.innerHTML += slide; // Adiciona o HTML ao contêiner
+                            l++;
+                        }
+                    </script>
 
+                </div>
+                <div class="book swiper-button-next"><span>&#8250;</span></div>
+                <div class="book swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
             </div>
-            <div class="swiper-button-next"><span>&#8250;</span></div>
-            <div class="swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
+            <div class="btn back" onclick="goToPage('floratta')">&#8249;</div>
         </div>
-        <div class="btn back" onclick="goToPage('troia')">&#8249;</div>
-    </div>
 
-    <!-- Brochura Troia -->
-    <div class="page" id="troia-brochura">
-        <div class="swiper book mySwiper">
-            <div id="swiper-container5" class="swiper-wrapper">
-                <script>
-                    let container5 = document.getElementById("swiper-container5");
-                    let n = 0
-                
-                    while (n <= 73) {
-                        let formattedNumber = n.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
-                        let slide = `
-                            <div class="swiper-slide">
-                                <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
-                            </div>
-                        `;
-                        container5.innerHTML += slide; // Adiciona o HTML ao contêiner
-                        n++
-                    }
-                </script>
-
+        <!-- Página fiori (Exemplo) -->
+        <div class="page" id="fiori">
+            <img src="assets/images/bg-page-fiori.png" alt="fiori" style="width:100%; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+            <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+                <div class="link-btn-img brochura" onclick="goToPage('fiori-brochura')"><img
+                        src="assets/images/bt-plan-fiori.png" alt="" width="100%"></div>
+                <div class="link-btn-img imagens" onclick="goToPage('fiori-imagens')"><img
+                        src="assets/images/bt-imagens-fiori.png" alt="" width="100%"></div>
             </div>
-            <div class="book swiper-button-next"><span>&#8250;</span></div>
-            <div class="book swiper-button-prev"><span>&#8249;</span></div>
-            <span class="swiper-pagination"></span>
         </div>
-        <div class="btn back" onclick="goToPage('troia')">&#8249;</div>
+
+        <!-- Imagens Fiori -->
+        <div class="page" id="fiori-imagens">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"><span>&#8250;</span></div>
+                <div class="swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
+            </div>
+            <div class="btn back" onclick="goToPage('fiori')">&#8249;</div>
+        </div>
+
+        <!-- Brochura Fiori -->
+        <div class="page" id="fiori-brochura">
+            <div class="swiper book mySwiper">
+                <div id="swiper-container4" class="swiper-wrapper">
+                    <script>
+                        let container4 = document.getElementById("swiper-container4");
+                        let m = 0
+                    
+                        while (m <= 73) {
+                            let formattedNumber = m.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                            let slide = `
+                                <div class="swiper-slide">
+                                    <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                                </div>
+                            `;
+                            container4.innerHTML += slide; // Adiciona o HTML ao contêiner
+                            m++
+                        }
+                    </script>
+
+                </div>
+                <div class="book swiper-button-next"><span>&#8250;</span></div>
+                <div class="book swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
+            </div>
+            <div class="btn back" onclick="goToPage('fiori')">&#8249;</div>
+        </div>
+
+        <!-- Página Troia (Exemplo) --> 
+        <div class="page" id="troia">
+            <img src="assets/images/bg-page-troia.png" alt="troia" style="width:100%; object-fit:cover;" />
+            <div class="btn back" onclick="goToPage('page2')">&#8249;</div>
+            <div style="position:absolute; bottom: 30px; right: 60px; display:flex; gap:20px;">
+                <div class="link-btn-img brochura" onclick="goToPage('troia-brochura')"><img
+                        src="assets/images/bt-plan-troia.png" alt="" width="100%"></div>
+                <div class="link-btn-img imagens" onclick="goToPage('troia-imagens')"><img
+                        src="assets/images/bt-imagens-troia.png" alt="" width="100%"></div>
+            </div>
+        </div>
+
+        <!-- Imagens Troia -->
+        <div class="page" id="troia-imagens">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/002_Pisc_A_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/003_Pisc_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/004_Parq_Inft_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/005_Acss_Pdst_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/006_Fchd_casa_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/007_Acss_Garg_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/009_Almd_B_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/010_Almd_C_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/011_Acess_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/101_Lvng_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/102_Jant_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/103_Grfr_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/104_Cozi_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/105_Lvnd_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/106_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/107_Clst_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/108_WC_Suit_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/109_Grgm_02.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/110_Msgm_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/111_Ftns_03.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/112_Crrd_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/113_Sauna_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/114_Offc_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/115_Cine_01.jpg" alt="" width="100%" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/galeria/floratta/116_Crrd_Grgm_01.jpg" alt="" width="100%" />
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"><span>&#8250;</span></div>
+                <div class="swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
+            </div>
+            <div class="btn back" onclick="goToPage('troia')">&#8249;</div>
+        </div>
+
+        <!-- Brochura Troia -->
+        <div class="page" id="troia-brochura">
+            <div class="swiper book mySwiper">
+                <div id="swiper-container5" class="swiper-wrapper">
+                    <script>
+                        let container5 = document.getElementById("swiper-container5");
+                        let n = 0
+                    
+                        while (n <= 73) {
+                            let formattedNumber = n.toString().padStart(2, "0"); // Garante que os números tenham 2 dígitos
+                            let slide = `
+                                <div class="swiper-slide">
+                                    <img src="https://www.inovamidia.com.br/clientes/majorsa/mesa-touch/assets/images/book/vistabella/${formattedNumber}.jpg" alt="" width="100%" />
+                                </div>
+                            `;
+                            container5.innerHTML += slide; // Adiciona o HTML ao contêiner
+                            n++
+                        }
+                    </script>
+
+                </div>
+                <div class="book swiper-button-next"><span>&#8250;</span></div>
+                <div class="book swiper-button-prev"><span>&#8249;</span></div>
+                <span class="swiper-pagination"></span>
+            </div>
+            <div class="btn back" onclick="goToPage('troia')">&#8249;</div>
+        </div>
     </div>
 
     <script>
@@ -1243,7 +1259,34 @@
         advanceByFrames(16);
     </script>
 
+    <script>
+        window.onload = function () {
+            const mobile = document.getElementById('mobile');
+            const desktop = document.getElementById('desktop');
+
+            if (window.innerWidth < 1280) {
+                mobile.style.display = 'flex';
+                desktop.style.display = 'none';
+            } else {
+                mobile.style.display = 'none';
+                desktop.style.display = 'block';
+            }
+        };
+
+        window.onresize = function () {
+            const mobile = document.getElementById('mobile');
+            const desktop = document.getElementById('desktop');
+
+            if (window.innerWidth < 1280) {
+                mobile.style.display = 'flex';
+                desktop.style.display = 'none';
+            } else {
+                mobile.style.display = 'none';
+                desktop.style.display = 'block';
+            }
+        };
+    </script>
+
 
 </body>
-
 </html>
