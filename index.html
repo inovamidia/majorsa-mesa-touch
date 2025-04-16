@@ -806,35 +806,30 @@
     <!-- Initialize Swiper -->
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            keyboard: {
-                enabled: true,
-            },
-            /* autoplay: {
-                  delay: 12000,
-                  disableOnInteraction: false,
-            }, */
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        // Criar um array para armazenar os Swipers
+        const swipers = [];
+
+        // Selecionar todos os .mySwiper e inicializar um Swiper para cada um
+        document.querySelectorAll('.mySwiper').forEach((el) => {
+            const swiper = new Swiper(el, {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                keyboard: {
+                    enabled: true,
+                },
+                navigation: {
+                    nextEl: el.querySelector('.swiper-button-next'),
+                    prevEl: el.querySelector('.swiper-button-prev'),
+                },
+            });
+            swipers.push(swiper);
         });
-        // Função para resetar o swiper
+
+        // Criar função para resetar todos os Swipers para o slide 0
         function resetSwiper() {
-            const wrapper = document.querySelector('.swiper-wrapper');
-            const prevButton = document.querySelector('.swiper-button-prev');
-
-            // Define o estilo inline do wrapper
-            wrapper.style.transform = 'translate3d(0px, 0px, 0px)';
-            wrapper.style.transition = 'transform 0.3s ease'; // Animação suave opcional
-
-            // Reinicia o swiper para o slide inicial
-            swiper.slideTo(0);
-
-            // Adiciona a classe "swiper-button-disabled" ao botão anterior
-            prevButton.classList.add('swiper-button-disabled');
+            swipers.forEach(swiper => {
+                swiper.slideTo(0); // ou slideToLoop(0) se loop: true
+            });
         }
     </script>
 
