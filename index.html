@@ -747,8 +747,6 @@
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-
-            returnToFirstSlide()
         }
     </script>
 
@@ -774,7 +772,6 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
-                returnToFirstSlide();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -787,7 +784,6 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
-                returnToFirstSlide();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -800,7 +796,6 @@
                 pauseVidVistabella();
                 pauseVidTolive();
                 pauseVidFloratta();
-                returnToFirstSlide();
             } else {
                 btnFull.style.display = 'none';
             }
@@ -825,11 +820,6 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-
-        // Função para retornar ao slide inicial
-        function returnToFirstSlide() {
-            swiper.slideTo(0); // Move para o primeiro slide (índice 0)
-        }
     </script>
 
     <script>
@@ -855,6 +845,7 @@
 
         function pauseVidTolive() {
             videoTolive.pause();
+            advanceByFrames(16);
             videoTolive.currentTime = 16;
             document.querySelector(".btn-play.vistabella").style.display = "block";
             document.querySelector(".btn-play.tolive").style.display = "block";
